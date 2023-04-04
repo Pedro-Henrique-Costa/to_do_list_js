@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- JS -->
+    <script src="./js/scripts.js" defer ></script> <!-- atributo defer: faz com que os arquivos carreguem após o html nao gerando erros de elementos não inicializados ainda -->
+    
+    <!-- Font Awesome-->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <!-- Titulo -->
+    <title>To do List</title>
+
+
+</head>
+
+<body>
+
+    <div class="to-do-container">  <!-- Posicao Relativa -->
+        
+        <!-- Cabeçalho do Retangulo-->
+        <header>                       <!-- Posição Absoluta-->
+            <h1> To do List</h1>
+        </header>
+
+        <!-- Formualario do Retangulo-->
+        <form id="to-do-form"> 
+            <!-- Titulo -->
+            <p>Adicione a sua tarefa: </p>
+
+            <!-- Div control para o Input e Button-->
+            <div class="form-control">
+
+                <!-- Input -->
+                <input type="text" id="to-do-input" placeholder="Tarefa">
+
+                <!-- Button -->
+                <button type="submit" id="btn-check"> <!-- Type submit para usar no js-->
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+
+            </div>
+            
+        </form>
+
+        <form id="edit-form" class="hide">  <!--Form não precisa do action="" pq n temos back-end -->
+            <p>Edit a sua Tarefa: </p>
+            <div class="form-control">
+
+                <input type="text" id="edit-input">
+
+                <button type="submit" class="btn-check">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+
+            </div>
+
+            <button id="cancel-edit-btn">Cancelar</button>
+        </form>
+
+        <div id="toolbar">
+            <div id="search">
+                <h4>Pesquisar</h4>
+                <form>
+                    <input type="text" id="search-input" placeholder="Buscar">
+                    <button id="erase-btn">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </form>
+            </div>
+            <div id="filter">
+
+                <h4>Filtrar</h4>
+
+                <select id="filter-select">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitos</option>
+                    <option value="to-do">A fazer</option>
+                </select>
+
+            </div>
+        </div>
+
+        <!-- Tarefa Realizada -->
+        <div id="to-do-list">
+            <div class="to-do done">  <!-- classe done estiliza quando está realizada-->
+
+                <h3>Tarefa asjnajsnajksa</h3>
+
+                <!-- Botão de Check -->
+                <button class="finish-to-do">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <!-- Botão de Edição -->
+                <button class="edit-to-do">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <!-- Botão de Delete-->
+                <button class="remove-to-do">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                
+            </div>
+        </div>
+        	
+    </div>
+
+   
+</body>
+</html>
